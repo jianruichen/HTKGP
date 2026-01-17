@@ -214,12 +214,8 @@ class Dataset:
             for i, m in zip(a, j):
                 if m == 0:
                     continue
-                # elif H2[i, m] >= 1:
-                #     H2[i, m] += 1
-                    # H1[i, m] = 1
                 else:
                     H1[i, m] = 1
-                    # H2[i, m] = 1
 
             for i, m in zip(d, j):
                 if m == 0:
