@@ -1,10 +1,6 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import numpy as np
-import math
-from scipy.stats import norm
-import torch.nn as nn
 from torch.nn.parameter import Parameter
 
 class GATLayer(nn.Module):
@@ -31,4 +27,5 @@ class GATLayer(nn.Module):
         a3 = (a3_exp / (a_exp + a1_exp+a2_exp+ a3_exp+a4_exp )).to(self.device)
         a4 = (a4_exp / (a_exp + a1_exp+a2_exp+ a3_exp+a4_exp )).to(self.device)
         return a,a1,a2,a3,a4
+
 
